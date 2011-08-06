@@ -2,16 +2,19 @@
 
 Simple leiningen plugin to lauch Jetty instances that can run any java WAR package inside Heroku.
 
+
 ## Usage
 
-This plugin requires that a `PORT` envinronment variable is present:
+A `PORT` envinronment variable must be present:
 
   PORT=8080 lein herokujetty
 
-You can add this command to your Procfile (Foreman configuration) as a web process:
+
+You can add this command to your Procfile (Foreman configuration) as a web process of your heroku application:
 
   # Procfile
   web: lein herokujetty
+
 
 ## License
 
