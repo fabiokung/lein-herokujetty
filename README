@@ -1,16 +1,17 @@
 # lein-herokujetty
 
-Simple leiningen plugin to lauch Jetty instances that can run any java WAR package inside Heroku.
+Simple leiningen plugin to launch Jetty instances inside Heroku, that can run any java WAR package.
 
 
 ## Usage
 
+This plugin tries to find a WAR package with the project name (from project.clj) inside the target/ directory.
 A `PORT` envinronment variable must be present:
 
   PORT=8080 lein herokujetty
 
 
-You can add this command to your Procfile (Foreman configuration) as a web process of your heroku application:
+You can add this command to your Procfile (Foreman configuration) as the web process of your heroku application:
 
   # Procfile
   web: lein herokujetty
